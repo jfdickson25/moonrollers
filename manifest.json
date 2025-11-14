@@ -1,0 +1,47 @@
+{
+  "short_name": "Moonrollers tracker",
+  "name": "Moonrollers tracker",
+  "description": "App for tracking prestige and hazard in Moonrollers",
+  "start_url": "/moonrollers",
+  "display": "standalone",
+  "theme_color": "rgb(20 20 20)",
+  "background_color": "rgb(20 20 20)",
+  "icons": [
+    {
+      "src": "/moonrollers/images/MR-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/moonrollers/images/MR-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait"
+}

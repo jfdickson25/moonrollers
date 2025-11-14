@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.60995359.css",
+    "main.js": "/static/js/main.e581b9ee.js",
+    "static/media/Moonrollers-Tracker-Token.png": "/static/media/Moonrollers-Tracker-Token.6ce600637729df16730c.png",
+    "index.html": "/index.html",
+    "main.60995359.css.map": "/static/css/main.60995359.css.map",
+    "main.e581b9ee.js.map": "/static/js/main.e581b9ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60995359.css",
+    "static/js/main.e581b9ee.js"
+  ]
+}
