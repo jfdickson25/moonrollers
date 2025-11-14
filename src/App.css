@@ -21,6 +21,10 @@ body {
     align-items: center;
     justify-items: center;
     height: 100vh;
+    background-image: url("/public/images/background.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: -1;
 }
 
 #logo {
@@ -32,9 +36,10 @@ body {
     height: 300px;
     width: 300px;
     color: white;
-    background-image: url("/public/images/Moonrollers-Tracker-Token.png");
+    background-image: url("/public/images/Moonrollers-Tracker-Token-1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     display: grid;
     align-items: center;
     justify-items: center;
