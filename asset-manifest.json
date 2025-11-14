@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/moonrollers/static/css/main.79ac8a86.css",
+    "main.css": "/moonrollers/static/css/main.eaf2b7ea.css",
     "main.js": "/moonrollers/static/js/main.81d13a90.js",
     "static/media/background.png": "/moonrollers/static/media/background.29bca5fa2058feee5eba.png",
     "index.html": "/moonrollers/index.html",
-    "main.79ac8a86.css.map": "/moonrollers/static/css/main.79ac8a86.css.map",
+    "main.eaf2b7ea.css.map": "/moonrollers/static/css/main.eaf2b7ea.css.map",
     "main.81d13a90.js.map": "/moonrollers/static/js/main.81d13a90.js.map"
   },
   "entrypoints": [
-    "static/css/main.79ac8a86.css",
+    "static/css/main.eaf2b7ea.css",
     "static/js/main.81d13a90.js"
   ]
 }
