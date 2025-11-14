@@ -1,6 +1,7 @@
 {
   "name": "moonrollers",
   "version": "0.0.1",
+  "homepage": "https://jordandickson.github.io/moonrollers/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
