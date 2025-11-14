@@ -14,7 +14,6 @@ export default function App() {
             <div id="track-area">
                 <div id="prestige">{prestige}</div>
                 <div id="hazard">
-                    <img src={`${process.env.PUBLIC_URL}/images/Hazard-symbol-1.png`} id="hazard-token" />
                     <div id="hazard-count">{hazardSymbols}</div>
                 </div>
             </div>

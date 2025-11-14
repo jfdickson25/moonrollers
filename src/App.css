@@ -56,20 +56,23 @@ body {
 #hazard {
     width: 35%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     align-items: center;
     justify-items: center;
 }
 
-#hazard-token {
-    width: 100%;
-}
-
 #hazard-count {
-    font-size: 42px;
+    font-size: 38px;
     padding: 0;
     margin: 0;
-    padding-top: 10px
+    background-image: url("/public/images/Hazard-symbol-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 
 #tokens {
