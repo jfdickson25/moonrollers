@@ -24,6 +24,7 @@ body {
     background-image: url("/public/images/background.png");
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: center;
     z-index: -1;
 }
 

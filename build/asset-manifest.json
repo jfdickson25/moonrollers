@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/moonrollers/static/css/main.d6736997.css",
-    "main.js": "/moonrollers/static/js/main.c99ac409.js",
-    "static/media/Moonrollers-Tracker-Token.png": "/moonrollers/static/media/Moonrollers-Tracker-Token.6ce600637729df16730c.png",
+    "main.css": "/moonrollers/static/css/main.79ac8a86.css",
+    "main.js": "/moonrollers/static/js/main.81d13a90.js",
+    "static/media/background.png": "/moonrollers/static/media/background.29bca5fa2058feee5eba.png",
     "index.html": "/moonrollers/index.html",
-    "main.d6736997.css.map": "/moonrollers/static/css/main.d6736997.css.map",
-    "main.c99ac409.js.map": "/moonrollers/static/js/main.c99ac409.js.map"
+    "main.79ac8a86.css.map": "/moonrollers/static/css/main.79ac8a86.css.map",
+    "main.81d13a90.js.map": "/moonrollers/static/js/main.81d13a90.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6736997.css",
-    "static/js/main.c99ac409.js"
+    "static/css/main.79ac8a86.css",
+    "static/js/main.81d13a90.js"
   ]
 }
