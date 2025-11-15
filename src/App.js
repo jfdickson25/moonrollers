@@ -90,7 +90,7 @@ export default function App() {
                 <div className="count">{totals[2]}</div>
             </div>
             <div id="reset">
-                <FontAwesomeIcon icon={faRotateRight} size="3x" color="white" onClick={ () => { setPrestige(0); setHazardSymbols(0); setTotals([0, 0, 0]); }}/>
+                <FontAwesomeIcon icon={faRotateRight} size="3x" color="white" onClick={ () => { setPrestige(0); setHazardSymbols(0); setTotals([0, 0, 0]); setAdd(true); }}/>
             </div>
         </div>
     );
