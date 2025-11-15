@@ -25,7 +25,7 @@ export default function App() {
 
                         setTimeout(() => {
                             setAdd(!add);
-                        }, 300);
+                        }, 100);
                     }}/>
             </div>
             <img
