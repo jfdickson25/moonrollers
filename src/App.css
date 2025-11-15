@@ -21,11 +21,20 @@ body {
     align-items: center;
     justify-items: center;
     height: 100vh;
-    background-image: url("/public/images/background.png");
+    background-image: url("/public/images/background-1.png");
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     z-index: -1;
+    margin: 3px;
+}
+
+#add-subtract {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    opacity: .7;
 }
 
 #logo {
@@ -73,6 +82,7 @@ body {
     align-self: end;
     margin-bottom: -10px;
     margin-top: 10px;
+    color: #C43C3C;
 }
 
 #tokens {
@@ -99,4 +109,18 @@ body {
     left: 50%;
     bottom: 30px;
     transform: translateX(-50%);
+}
+
+.rotate {
+    animation: rotation 1.5s cubic-bezier(.3, .9, .4, 1.2);
+}
+
+@keyframes rotation {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(60deg); }
+    25%  { transform: rotate(58deg); } /* slight mechanical wobble */
+    50%  { transform: rotate(180deg); }
+    70%  { transform: rotate(260deg); }
+    75%  { transform: rotate(255deg); } /* wobble */
+    100% { transform: rotate(360deg); }
 }

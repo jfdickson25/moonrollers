@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
+import { faRotateRight, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 export default function App() {
 
     const [prestige, setPrestige] = useState(0);
     const [hazardSymbols, setHazardSymbols] = useState(0);
     const [totals, setTotals] = useState([0, 0, 0]);
+    const [rotateLogo, setRotateLogo] = useState(false);
+    const [add, setAdd] = useState(true);
 
     return (
         <div id="app">
-            <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-Logo.png`} id="logo" />
+            <div id="add-subtract">
+                <FontAwesomeIcon icon={add ? faPlus : faMinus} size="2x" color="white" onClick={() => setAdd(!add)} />
+            </div>
+            <img
+                className={rotateLogo ? "rotate" : ""}
+                src={`${process.env.PUBLIC_URL}/images/Moonrollers-Logo.png`} id="logo"
+                onClick={() => {
+                    setRotateLogo(true);
+                    setTimeout(() => setRotateLogo(false), 1500);
+                }}
+            />
             <div id="track-area">
                 <div id="prestige">{prestige}</div>
                 <div id="hazard">
@@ -18,9 +30,39 @@ export default function App() {
                 </div>
             </div>
             <div id="tokens">
-                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-1-Token.png`} className="token" onClick={() => { setPrestige(prestige + 1); setTotals([totals[0] + 1, totals[1], totals[2]]); }} />
-                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-2-Token.png`} className="token" onClick={() => { setPrestige(prestige + 2); setHazardSymbols(hazardSymbols + 1); setTotals([totals[0], totals[1] + 1, totals[2]]); }} />
-                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-5-Token.png`} className="token" onClick={() => { setPrestige(prestige + 5); setHazardSymbols(hazardSymbols + 2); setTotals([totals[0], totals[1], totals[2] + 1]); }} />
+                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-1-Token.png`} className="token" onClick={() => 
+                    { 
+                        if (add) {
+                            setPrestige(prestige + 1); setTotals([totals[0] + 1, totals[1], totals[2]]);
+                        } else {
+                            if (totals[0] > 0) {
+                                setPrestige(prestige - 1); setTotals([totals[0] - 1, totals[1], totals[2]]);
+                            }
+                        }
+                    }
+                } />
+                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-2-Token.png`} className="token" onClick={() => 
+                    { 
+                        if (add) {
+                            setPrestige(prestige + 2); setHazardSymbols(hazardSymbols + 1); setTotals([totals[0], totals[1] + 1, totals[2]]);
+                        } else {
+                            if (totals[1] > 0) {
+                                setPrestige(prestige - 2); setHazardSymbols(hazardSymbols - 1); setTotals([totals[0], totals[1] - 1, totals[2]]);
+                            }
+                        }
+                    }
+                } />
+                <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-5-Token.png`} className="token" onClick={() => 
+                    { 
+                        if (add) {
+                            setPrestige(prestige + 5); setHazardSymbols(hazardSymbols + 2); setTotals([totals[0], totals[1], totals[2] + 1]); 
+                        } else {
+                            if (totals[2] > 0) {
+                                setPrestige(prestige - 5); setHazardSymbols(hazardSymbols - 2); setTotals([totals[0], totals[1], totals[2] - 1]);
+                            }
+                        }
+                    }
+                } />
                 <div className="count">{totals[0]}</div>
                 <div className="count">{totals[1]}</div>
                 <div className="count">{totals[2]}</div>
