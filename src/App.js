@@ -35,7 +35,7 @@ export default function App() {
                     setTimeout(() => {
                         setRotateLogo(true);
                         setTimeout(() => setRotateLogo(false), 1500);
-                    }, 500)
+                    }, 300)
                 }}
             />
             <div id="track-area">
