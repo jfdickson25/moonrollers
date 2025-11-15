@@ -124,3 +124,13 @@ body {
     75%  { transform: rotate(255deg); } /* wobble */
     100% { transform: rotate(360deg); }
 }
+
+.pressed {
+    animation: press 0.5s ease;
+}
+
+@keyframes press {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
