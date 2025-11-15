@@ -32,8 +32,10 @@ export default function App() {
                 className={rotateLogo ? "rotate" : ""}
                 src={`${process.env.PUBLIC_URL}/images/Moonrollers-Logo.png`} id="logo"
                 onClick={() => {
-                    setRotateLogo(true);
-                    setTimeout(() => setRotateLogo(false), 1500);
+                    setTimeout(() => {
+                        setRotateLogo(true);
+                        setTimeout(() => setRotateLogo(false), 1500);
+                    }, 500)
                 }}
             />
             <div id="track-area">
