@@ -13,7 +13,7 @@ export default function App() {
 
     let handleButtonPresses = (index) => {
         setPressed(pressed.map((p, i) => i === index));
-        setTimeout(() => setPressed([false, false, false, false]), 500);
+        setTimeout(() => setPressed([false, false, false, false]), 300);
     };
 
     return (
@@ -25,7 +25,7 @@ export default function App() {
 
                         setTimeout(() => {
                             setAdd(!add);
-                        }, 500);
+                        }, 300);
                     }}/>
             </div>
             <img

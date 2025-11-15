@@ -126,7 +126,7 @@ body {
 }
 
 .pressed {
-    animation: press 0.5s ease;
+    animation: press 0.3s ease;
 }
 
 @keyframes press {
