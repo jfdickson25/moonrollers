@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/moonrollers/static/css/main.c9168e16.css",
-    "main.js": "/moonrollers/static/js/main.702fde65.js",
+    "main.css": "/moonrollers/static/css/main.f335fac1.css",
+    "main.js": "/moonrollers/static/js/main.8fdab0dd.js",
     "static/media/background-1.png": "/moonrollers/static/media/background-1.4cc58d52aea021990f73.png",
     "static/media/Hazard-symbol-2.png": "/moonrollers/static/media/Hazard-symbol-2.f0232391f137f9901458.png",
     "index.html": "/moonrollers/index.html",
-    "main.c9168e16.css.map": "/moonrollers/static/css/main.c9168e16.css.map",
-    "main.702fde65.js.map": "/moonrollers/static/js/main.702fde65.js.map"
+    "main.f335fac1.css.map": "/moonrollers/static/css/main.f335fac1.css.map",
+    "main.8fdab0dd.js.map": "/moonrollers/static/js/main.8fdab0dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9168e16.css",
-    "static/js/main.702fde65.js"
+    "static/css/main.f335fac1.css",
+    "static/js/main.8fdab0dd.js"
   ]
 }

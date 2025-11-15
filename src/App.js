@@ -11,19 +11,22 @@ export default function App() {
     const [add, setAdd] = useState(true);
     const [pressed, setPressed] = useState([false, false, false, false]);
 
+    let handleButtonPresses = (index) => {
+        setPressed(pressed.map((p, i) => i === index));
+        setTimeout(() => setPressed([false, false, false, false]), 500);
+    };
+
     return (
         <div id="app">
             <div id="add-subtract">
                 <FontAwesomeIcon icon={add ? faPlus : faMinus} size="2x" color="white" className={ pressed[3] ? "pressed" : "" }
-                    onClick={() => 
-                        {
-                            setPressed([false, false, false, true]);
-                            setTimeout(() => {
-                                setAdd(!add);
-                                setPressed([false, false, false, false]);
-                             }, 500);
-                        }
-                    } />
+                    onClick={() => {
+                        handleButtonPresses(3);
+
+                        setTimeout(() => {
+                            setAdd(!add);
+                        }, 500);
+                    }}/>
             </div>
             <img
                 className={rotateLogo ? "rotate" : ""}
@@ -51,8 +54,7 @@ export default function App() {
                             }
                         }
 
-                        setPressed([true, false, false, false]);
-                        setTimeout(() => setPressed([false, false, false, false]), 500);
+                        handleButtonPresses(0);
                     }
                 } />
                 <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-2-Token.png`} className={pressed[1] ? "token pressed" : "token"}
@@ -66,9 +68,7 @@ export default function App() {
                             }
                         }
  
-                        setPressed([false, true, false, false]);
-
-                        setTimeout(() => setPressed([false, false, false, false]), 500);
+                        handleButtonPresses(1);
                     }
                 } />
                 <img src={`${process.env.PUBLIC_URL}/images/Moonrollers-5-Token.png`} className={pressed[2] ? "token pressed" : "token"}
@@ -82,8 +82,7 @@ export default function App() {
                             }
                         }
 
-                        setPressed([false, false, true, false]);
-                        setTimeout(() => setPressed([false, false, false, false]), 500);
+                        handleButtonPresses(2);
                     }
                 } />
                 <div className="count">{totals[0]}</div>
