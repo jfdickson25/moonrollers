@@ -10,6 +10,7 @@ export default function App() {
     const [rotateLogo, setRotateLogo] = useState(false);
     const [add, setAdd] = useState(true);
     const [pressed, setPressed] = useState([false, false, false, false]);
+    const [rotateReset, setRotateReset] = useState(false);
 
     let handleButtonPresses = (index) => {
         setPressed(pressed.map((p, i) => i === index));
@@ -92,7 +93,21 @@ export default function App() {
                 <div className="count">{totals[2]}</div>
             </div>
             <div id="reset">
-                <FontAwesomeIcon icon={faRotateRight} size="3x" color="white" onClick={ () => { setPrestige(0); setHazardSymbols(0); setTotals([0, 0, 0]); setAdd(true); }}/>
+                <FontAwesomeIcon icon={faRotateRight} size="3x" color="white" className={ rotateReset ? 'rotate-reset' : '' }
+                    onClick={
+                        () => {
+                             setRotateReset(true);
+                            setTimeout(() => {
+                                setPrestige(0); 
+                                setHazardSymbols(0); 
+                                setTotals([0, 0, 0]); 
+                                setAdd(true); 
+
+                                setRotateReset(false);
+                            }, 500);
+                        }
+                    }
+                />
             </div>
         </div>
     );

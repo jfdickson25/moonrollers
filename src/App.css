@@ -134,3 +134,16 @@ body {
     50% { transform: scale(0.9); opacity: 0.6; }
     100% { transform: scale(1); opacity: 1; }
 }
+
+.rotate-reset {
+    animation: rotateAnimation .5s linear;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
