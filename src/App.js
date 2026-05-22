@@ -8,6 +8,7 @@ export default function App() {
     const [hazardSymbols, setHazardSymbols] = useState(0);
     const [totals, setTotals] = useState([0, 0, 0]);
     const [rotateLogo, setRotateLogo] = useState(false);
+    const [logoRotating, setLogoRotating] = useState(false);
     const [add, setAdd] = useState(true);
     const [pressed, setPressed] = useState([false, false, false, false]);
     const [rotateReset, setRotateReset] = useState(false);
@@ -33,10 +34,12 @@ export default function App() {
                 className={rotateLogo ? "rotate" : ""}
                 src={`${process.env.PUBLIC_URL}/images/Moonrollers-Logo.png`} id="logo"
                 onClick={() => {
-                    setTimeout(() => {
-                        setRotateLogo(true);
-                        setTimeout(() => setRotateLogo(false), 1500);
-                    }, 300)
+                    if (!rotateLogo) {
+                        setTimeout(() => {
+                            setRotateLogo(true);
+                            setTimeout(() => setRotateLogo(false), 1500);
+                        }, 300)
+                    }
                 }}
             />
             <div id="track-area">
