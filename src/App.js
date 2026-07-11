@@ -13,6 +13,27 @@ export default function App() {
     const [pressed, setPressed] = useState([false, false, false, false]);
     const [rotateReset, setRotateReset] = useState(false);
 
+    useEffect(() => {
+        const storedPrestige = localStorage.getItem('prestige');
+        const storedHazardSymbols = localStorage.getItem('hazardSymbols');
+        const storedTotals = localStorage.getItem('totals');
+        const storedAdd = localStorage.getItem('add');
+
+        if (storedPrestige) {
+            setPrestige(parseInt(storedPrestige));
+        }
+        if (storedHazardSymbols) {
+            setHazardSymbols(parseInt(storedHazardSymbols));
+        }
+        if (storedTotals) {
+            setTotals(JSON.parse(storedTotals));
+        }
+        if (storedAdd) {
+            setAdd(JSON.parse(storedAdd));
+        }
+    }, []);
+
+
     let handleButtonPresses = (index) => {
         setPressed(pressed.map((p, i) => i === index));
         setTimeout(() => setPressed([false, false, false, false]), 300);
@@ -54,9 +75,13 @@ export default function App() {
                     { 
                         if (add) {
                             setPrestige(prestige + 1); setTotals([totals[0] + 1, totals[1], totals[2]]);
+                            localStorage.setItem('prestige', prestige + 1);
+                            localStorage.setItem('totals', JSON.stringify([totals[0] + 1, totals[1], totals[2]]));
                         } else {
                             if (totals[0] > 0) {
                                 setPrestige(prestige - 1); setTotals([totals[0] - 1, totals[1], totals[2]]);
+                                localStorage.setItem('prestige', prestige - 1);
+                                localStorage.setItem('totals', JSON.stringify([totals[0] - 1, totals[1], totals[2]]));
                             }
                         }
 
@@ -68,9 +93,15 @@ export default function App() {
                     { 
                         if (add) {
                             setPrestige(prestige + 2); setHazardSymbols(hazardSymbols + 1); setTotals([totals[0], totals[1] + 1, totals[2]]);
+                            localStorage.setItem('prestige', prestige + 2);
+                            localStorage.setItem('hazardSymbols', hazardSymbols + 1);
+                            localStorage.setItem('totals', JSON.stringify([totals[0], totals[1] + 1, totals[2]]));
                         } else {
                             if (totals[1] > 0) {
                                 setPrestige(prestige - 2); setHazardSymbols(hazardSymbols - 1); setTotals([totals[0], totals[1] - 1, totals[2]]);
+                                localStorage.setItem('prestige', prestige - 2);
+                                localStorage.setItem('hazardSymbols', hazardSymbols - 1);
+                                localStorage.setItem('totals', JSON.stringify([totals[0], totals[1] - 1, totals[2]]));
                             }
                         }
  
@@ -82,9 +113,15 @@ export default function App() {
                     { 
                         if (add) {
                             setPrestige(prestige + 5); setHazardSymbols(hazardSymbols + 2); setTotals([totals[0], totals[1], totals[2] + 1]); 
+                            localStorage.setItem('prestige', prestige + 5);
+                            localStorage.setItem('hazardSymbols', hazardSymbols + 2);
+                            localStorage.setItem('totals', JSON.stringify([totals[0], totals[1], totals[2] + 1]));
                         } else {
                             if (totals[2] > 0) {
                                 setPrestige(prestige - 5); setHazardSymbols(hazardSymbols - 2); setTotals([totals[0], totals[1], totals[2] - 1]);
+                                localStorage.setItem('prestige', prestige - 5);
+                                localStorage.setItem('hazardSymbols', hazardSymbols - 2);
+                                localStorage.setItem('totals', JSON.stringify([totals[0], totals[1], totals[2] - 1]));
                             }
                         }
 
@@ -105,6 +142,10 @@ export default function App() {
                                 setHazardSymbols(0); 
                                 setTotals([0, 0, 0]); 
                                 setAdd(true); 
+                                localStorage.setItem('prestige', 0);
+                                localStorage.setItem('hazardSymbols', 0);
+                                localStorage.setItem('totals', JSON.stringify([0, 0, 0]));
+                                localStorage.setItem('add', true);
 
                                 setRotateReset(false);
                             }, 500);
